@@ -69,7 +69,7 @@
                         <img
                                 :src="imageServerURL+product.image"
                                 class="card-img-top img"
-                                style="height: 70%;"
+                                style="height: 200px;"
                                 alt="..."
                                 @click="addProduct(product.id)"
                         />

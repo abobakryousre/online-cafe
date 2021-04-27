@@ -42,6 +42,11 @@ const loadSharedGroupComponents = (componenet) => {
 
 const UserRoutes = [
     {
+        path: "/",
+        name: "base",
+        component: loadSharedGroupComponents("HomeComponent"),
+    },
+    {
         path: "/home",
         name: "home",
         component: loadSharedGroupComponents("HomeComponent"),
@@ -62,6 +67,7 @@ const UserRoutes = [
 ];
 
 const AdminRoutes = [
+    { name: "base", path: "/", component: loadSharedGroupComponents("HomeComponent")},
     { name: "home", path: "/home", component: loadSharedGroupComponents("HomeComponent") },
 
     { name: "allProducts", path: "/products", component: loadAdminGroupComponents("AllProductsComponent")},
