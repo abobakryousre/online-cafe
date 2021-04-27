@@ -10,11 +10,17 @@ use App\Models\Product;
 use App\Models\Order;
 
 use Illuminate\Support\Facades\Log;
+use Illuminate\Support\Facades\Auth;
 
 class ChecksController extends Controller
 {
     //
 
+    function __construct(){
+        $this->middleware("auth:sanctum");
+
+    }
+    
     public function index(Request $request)
     {
 

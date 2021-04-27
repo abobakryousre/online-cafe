@@ -9,9 +9,15 @@ use App\Models\User;
 use App\Models\Product;
 use App\Models\Order;
 use App\Models\Room;
+use Illuminate\Support\Facades\Auth;
 
 class CheckOrderController extends Controller
 {
+    function __construct(){
+        $this->middleware("auth:sanctum");
+
+    }
+
     public function index(Request $request)
     {
         $order_id= $request['orderId'];

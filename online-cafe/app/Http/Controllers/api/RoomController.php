@@ -4,10 +4,15 @@ namespace App\Http\Controllers\api;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Room;
+use Illuminate\Support\Facades\Auth;
 
 
 class RoomController extends Controller
 {
+    function __construct(){
+        $this->middleware("auth:sanctum");
+
+    }
     
     function index (){
         $room = Room::all();
