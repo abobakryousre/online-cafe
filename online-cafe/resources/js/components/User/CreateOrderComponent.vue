@@ -15,7 +15,7 @@
                     </div>
            </div>
         <div class="row">
-            <form class="col-lg-4 p-3 border" @submit.prevent="confirmOrder()">
+            <form class="col-lg-4 p-3 border border-info" @submit.prevent="confirmOrder()">
                 <!-- Dispaly all User For Admin Start-->
 
                 <div class="row" v-if="curUesr.is_admin">
@@ -73,7 +73,7 @@
                 </div>
             </form> <!-- create order  -->
             <div class="col-1"></div>
-            <div id="products" class="col-lg-7 py-3  border">
+            <div id="products" class="col-lg-7 py-3  border border-info">
                 <div class="row justify-content-center">
                     <div v-for="product in productsFilterList" :key="product.id" >
                     <div class="card m-2 " style="width: 12rem;  height: 95%;" v-if="product.available">
@@ -99,7 +99,7 @@
                             
                         </div>
                         <div class="card-footer">
-                             <button href="#" @click.prevent="addProduct(product.id)" class="btn btn-primary btn-block" style="position: absolute; bottom: 0; right: 0%; "
+                             <button href="#" @click.prevent="addProduct(product.id)" class="btn btn-info btn-block" style="position: absolute; bottom: 0; right: 0%; "
                                     >Add </button
                                     >
                         </div>
@@ -115,7 +115,7 @@
             <div class="row justify-content-center">
                 <div class="col-md-8">
                     <div class="card">
-                        <div class="card-header text-center text-dark"></div>
+                        <div class="card-header text-center text-dark bg-info"></div>
                         <div class="card-body">
                             <h3 class="aler alert-info text-center">  Unfortunately, there is no available products Right Now ... </h3>
                         </div>

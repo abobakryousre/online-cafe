@@ -1,5 +1,5 @@
 <template>
-     <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm mb-5">
+     <nav class="navbar navbar-expand-md navbar-light bg-info shadow-sm mb-5">
             <div class="container">
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
@@ -26,8 +26,8 @@
                     <ul class="navbar-nav ml-auto">
                         <!-- Authentication Links -->
                         <li class="nav-item dropdown">
-                            <img  v-if="expression==true" :src="user.avatar " :alt=" user.name "  style=" width: 25%; margin-left: 100%; " />
-                            <img  v-if="expression==false" :src="imageServerURL+user.avatar " :alt=" user.name " style="    width: 25%; margin-left: 100%; "/>
+                            <img  v-if="expression==true" :src="user.avatar " :alt=" user.name "  style=" width: 25%; margin-left: 100%;     border-radius: 10px;" />
+                            <img  v-if="expression==false" :src="imageServerURL+user.avatar " :alt=" user.name " style="    width: 25%; margin-left: 100%;     border-radius: 10px;"/>
                             <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" style="margin-left: 100%;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >{{ user.name}}</a>
                             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown" style="left: 100%;">
                                 <a class="dropdown-item" href="/logout" @click.prevent="logout()">

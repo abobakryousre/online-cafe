@@ -1,8 +1,15 @@
 <template>
 <div class="container">
-<div class="row">
-<table class="table table-striped table-bordered  table-hover  text-center col-12 ">
-<thead>
+       <router-link class="btn btn-success mb-2 float-right" :to="'/userstore'"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-circle" viewBox="0 0 16 16">
+        <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+        <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
+      </svg>
+    </router-link>
+
+ 
+
+<table class="table table-striped  text-center col-12 ">
+<thead class="bg-info">
     <tr>
         <th >Name</th>
         <th>Rooms</th>
@@ -13,7 +20,7 @@
 </thead>
 <tbody>
 
-<tr v-for="user in users" :key="user.id">
+<tr class="clickable" v-for="user in users" :key="user.id">
     <td>{{user.name}}</td>
     <td>
     <details>
@@ -25,8 +32,8 @@
  </ul>
 </details>
     </td>
-    <td v-if="user.avatar.match(/^http/ig)"><img   :src="user.avatar " :alt=" user.name "  style="height: 40px; width: 40px" class="profile-user-img img-fluid img-circle"/></td>
-    <td v-if="!user.avatar.match(/^http/ig)"><img   :src="imageServerURL+user.avatar " :alt=" user.name " style="height: 40px; width: 40px" class="profile-user-img img-fluid img-circle" /></td>
+    <td v-if="user.avatar.match(/^http/ig)"><img   :src="user.avatar " :alt=" user.name "  style="height: 40px; width: 40px; border-radius: 50%;" class="profile-user-img img-fluid img-circle"/></td>
+    <td v-if="!user.avatar.match(/^http/ig)"><img   :src="imageServerURL+user.avatar " :alt=" user.name " style="height: 40px; width: 40px; border-radius: 50%;" class="profile-user-img img-fluid img-circle" /></td>
  
 
   <td><router-link :to="'/edit/'+user.id"  class="btn btn-success">Edit</router-link></td> 
@@ -42,8 +49,8 @@
 
 
  </table>
-  <td><router-link :to="'/userstore'"  class="btn btn-success">Add New user </router-link></td> 
-</div>
+   
+
 </div>
 
 </template>
@@ -97,8 +104,14 @@ import urls from '../services/apiURLs' ;
 
 </script>
 
-<style>
-
+<style scoped>
+th, td {
+    text-align: center;
+    vertical-align: middle;
+}
+.clickable:hover{
+    background-color: lightskyblue;
+}
 </style>
 
       

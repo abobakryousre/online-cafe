@@ -2,7 +2,7 @@
 
 <template>
         <div class="card">
-            <div class="card-header">
+            <div class="card-header bg-info">
                 Add Product
             </div>
              <form  @submit.prevent="onSubmit" >
@@ -101,7 +101,7 @@
                 
             </div>
             <div class="card-footer text-muted">
-                <button class="btn btn-primary btn-block" >Add Product</button>
+                <button class="btn btn-info btn-block" >Add Product</button>
             </div>
             </form>
         </div>

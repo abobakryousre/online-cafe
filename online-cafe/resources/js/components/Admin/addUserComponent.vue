@@ -1,7 +1,21 @@
 <template>
     <div class="container">
-    <div class="row">
-        <form v-on:submit.prevent="onSubmit">
+   
+        
+  
+</div>
+
+
+
+
+<div class="card">
+            <div class="card-header bg-info">
+                Add User
+            </div>
+            <form v-on:submit.prevent="onSubmit">
+            <div class="card-body">
+              
+                
             <div class="form-group">
                 <lable>Name</lable>
                 <input type="text" class="form-control" name="name" v-model="form.name" />
@@ -87,10 +101,14 @@
             <br>
           
 
-            <button type="submit" name="submit" class="btn btn-primary mg-5">create</button>
-        </form>
-    </div>
-</div>
+            
+      
+            </div>
+            <div class="card-footer text-muted">
+                <button type="submit" name="submit" class="btn btn-info btn-block mg-5">Add User</button>
+            </div>
+            </form>
+        </div>
 </template>
 
 <script>
