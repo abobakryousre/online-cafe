@@ -16757,7 +16757,7 @@ var _withId = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.withScopeId)("dat
 (0,vue__WEBPACK_IMPORTED_MODULE_0__.pushScopeId)("data-v-2d0773ae");
 
 var _hoisted_1 = {
-  "class": "navbar navbar-expand-md navbar-light bg-white shadow-sm mb-5"
+  "class": "navbar navbar-expand-md navbar-light bg-info shadow-sm mb-5"
 };
 var _hoisted_2 = {
   "class": "container"
@@ -16895,7 +16895,8 @@ var render = /*#__PURE__*/_withId(function (_ctx, _cache, $props, $setup, $data,
     alt: $props.user.name,
     style: {
       "width": "25%",
-      "margin-left": "100%"
+      "margin-left": "100%",
+      "border-radius": "10px"
     }
   }, null, 8
   /* PROPS */
@@ -16905,7 +16906,8 @@ var render = /*#__PURE__*/_withId(function (_ctx, _cache, $props, $setup, $data,
     alt: $props.user.name,
     style: {
       "width": "25%",
-      "margin-left": "100%"
+      "margin-left": "100%",
+      "border-radius": "10px"
     }
   }, null, 8
   /* PROPS */
@@ -17013,7 +17015,7 @@ var _withId = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.withScopeId)("dat
 (0,vue__WEBPACK_IMPORTED_MODULE_0__.pushScopeId)("data-v-12cf30d4");
 
 var _hoisted_1 = {
-  "class": "navbar navbar-expand-md navbar-light bg-white shadow-sm"
+  "class": "navbar navbar-expand-md navbar-light bg-info shadow-sm"
 };
 var _hoisted_2 = {
   "class": "container"
@@ -17127,7 +17129,8 @@ var render = /*#__PURE__*/_withId(function (_ctx, _cache, $props, $setup, $data,
     style: {
       "width": "95px",
       "margin-left": "100%",
-      "height": "124px"
+      "height": "124px",
+      "border-radius": "10px"
     }
   }, null, 8
   /* PROPS */
@@ -17138,7 +17141,8 @@ var render = /*#__PURE__*/_withId(function (_ctx, _cache, $props, $setup, $data,
     style: {
       "width": "95px",
       "margin-left": "100%",
-      "height": "124px"
+      "height": "124px",
+      "border-radius": "10px"
     }
   }, null, 8
   /* PROPS */

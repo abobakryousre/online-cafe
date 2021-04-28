@@ -36,7 +36,7 @@
         <!-- Orders Start  -->
         <div class="row m-2">
             <table class="table">
-                <thead class="table-dark">
+                <thead class="bg-info">
                     <tr>
                         <th scope="col">Order Date</th>
                         <th scope="col">Status</th>
@@ -63,7 +63,7 @@
         <div class="row justify-content-center">
             <div class="col-md-8" v-if="orderDetails">
                 <div class="card">
-                    <div class="card-header">Order Details </div>
+                    <div class="card-header bg-info">Order Details </div>
                             <div class="card-body p-0">
                                 <div class="row justify-content-center">
                                     <div class="card m-2 " style="width: 12rem;" v-for="product in orderDetails.products" :key="product.id">

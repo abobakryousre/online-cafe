@@ -63,14 +63,14 @@
         <div class="row justify-content-center">
             <div class="col-md-8" >
                 <div class="card">
-                    <div class="card-header">Order Details</div>
+                    <div class="card-header bg-info">Order Details</div>
                             <div class="card-body p-0">
                                 <div class="row justify-content-center">
                                     <div class="card m-2 " style="width: 12rem;" v-for="product in specificOrder['products']" :key="product.id">
                                         <img
                                                 :src="imageServerURL+product.image"
                                                 class="card-img-top img"
-                                                style="height: 80%;"
+                                                style="height: 200px;"
                                                 alt="..."
                                         />
 

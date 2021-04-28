@@ -3,7 +3,7 @@
         <div class="row justify-content-center">
             <div class="col-md-8" v-if="latestOrder">
                 <div class="card">
-                    <div class="card-header">Latest Order</div>
+                    <div class="card-header bg-info">Latest Order</div>
                             <div class="card-body p-0">
                                 <div class="row justify-content-center">
                                     <div class="card m-2 " style="width: 12rem;" v-for="product in latestOrder.products" :key="product.id">
