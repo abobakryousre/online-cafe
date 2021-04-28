@@ -16,9 +16,7 @@
                         <li class="p-2">
                             <router-link :to="{name: 'alluser'}" class="navbar-brand links">Users</router-link>
                         </li>
-                        <!-- <li class="p-2">
-                            <router-link to="/create-order" class="navbar-brand links">Manual Order</router-link>
-                        </li> -->
+
                         <li class="p-2">
                             <router-link to="/checks" class="navbar-brand links">Checks</router-link>
                         </li>

@@ -16,10 +16,9 @@ class ChecksController extends Controller
 {
     //
 
-    // function __construct(){
-    //     $this->middleware("auth:sanctum");
-
-    // }
+    function __construct(){
+        $this->middleware("auth:sanctum");
+    }
 
     public function index(Request $request)
     {
@@ -55,7 +54,6 @@ class ChecksController extends Controller
     {
 
         $totalAmountForUser = 0;
-
         $user = User::where('name', $input)->first();
         $id = $user->id;
         $orders = Order::where('user_id', $id)->where('created_at', '>=', $start)->where('created_at', '<=', $end)->paginate(5)->withQueryString();

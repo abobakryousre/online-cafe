@@ -68,9 +68,6 @@ axios.defaults.baseURL = 'http://localhost:8000'
             formData.append('name', this.form.name)
             formData.append('rooms', this.form.rooms)
 
-            // formData.append('email', this.user.email)
-            // formData.append('password', this.user.password)
-            // formData.append('room_id', this.user.room_id)
             axios
                 .post(`/api/useredit/${this.$route.params.id}`, formData)
                 .then((res) => {
@@ -103,17 +100,5 @@ axios.defaults.baseURL = 'http://localhost:8000'
                 });
             }
         }, 
-
-
-        //     updateuser() {
-        //             console.log(this.user);
-        //             console.log(this.$route.params.id)
-        //         axios
-        //             .patch(`/api/useredit/${this.$route.params.id}`, this.user)
-        //             .then((res) => {
-        //                 this.$router.push({ name:'alluser'});
-        //             });
-        //     }
-        // }
         }
 </script>

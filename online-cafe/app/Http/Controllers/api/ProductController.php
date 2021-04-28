@@ -14,8 +14,6 @@ class ProductController extends Controller
 {
     function __construct(){
         $this->middleware("auth:sanctum");
-        // $this->middleware("auth:sanctum")->only(["destroy","update"]);
-
     }
 
     function index (){
@@ -26,19 +24,6 @@ class ProductController extends Controller
             $product->category_id =  $product->category ;
             $productarr[] = $product ;
         }
-        // dd($productarr);
-
-        // $products = Product::paginate(2);
-        // $productarr = $products->toArray();
-        // $counter = 0 ;
-        // foreach($products as $product){   
-        //     $product->category_id =  $product->category ;
-        //     $productarr['data'][$counter++] = $product ;
-        // }
-        // // dd($productarr);
-        // if (!$productarr)  return response()->json(["data" => []]);
-        // // dd($products);
-        // return $productarr ;
         return $productarr ;
     }
 
@@ -54,42 +39,6 @@ class ProductController extends Controller
     
 
     function store(Request $request){
-       
-        // error_log($request->all());
-        // $request->validate([
-        //     'image' => 'required|mimes:jpg,jpeg,png,csv,txt,xlx,xls,pdf|max:2048'
-        //  ]);
- 
-        //  $fileUpload = new FileUpload;
- 
-        //  if($request->file()) {
-        //      $file_name = time().'_'.$request->file->getClientOriginalName();
-        //      $file_path = $request->file('image')->storeAs('uploads', $file_name, 'public');
- 
-        //      $fileUpload->name = time().'_'.$request->file->getClientOriginalName();
-        //      $fileUpload->path = '/storage/' . $file_path;
-        //     //  $fileUpload->save();
-        //      $request->merge([
-        //         'image' => $fileUpload,
-        //     ]);
- 
-        //     //  return response()->json(['success'=>'File uploaded successfully.']);
-        //  }
-
-        // $upload_path = public_path('upload');
-        // $file_name = $request->file->getClientOriginalName();
-        // $generated_new_name = time() . '.' . $request->file->getClientOriginalExtension();
-        // $request->file->move($upload_path, $generated_new_name);
-         
-        // $insert['image'] = $file_name;
-        // $check = Product::insertGetId($insert);
-
-        // $request->validate([
-        //     'name' => 'required',
-        //     'price' => 'required',
-        //     'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
-        // ]);
-  
         $input = $request->all();
   
         if ($image = $request->file('image')) {
@@ -100,15 +49,6 @@ class ProductController extends Controller
         }
     
         $add = Product::create($input);
-     
-        // return redirect()->route('products.index')
-        //                 ->with('success','Product created successfully.');
-        // $request->merge([
-        //             'image' => $file_name,
-        //         ]);
-        // return response()->json(['success' => 'You have successfully uploaded "' . $file_name . '"']);
-
-        // $add = Product::create($request->all());
         if ($add){
             return response()->json(["is_done"=>$request]);
         }else{
@@ -130,12 +70,7 @@ class ProductController extends Controller
             $input['image'] = "$profileImage";
         }
         $update = $product->update($input);   
-        // $update = $product->update([
-        //     'name' => $input['name'],
-        //     'price' => $input['price'],
-        //     'image' => $input['image'],
-        //     'category_id' => $input['category_id']
-        // ]);    
+   
         if ($update){
             return response()->json(["succes"=>$input]);
         }else{
@@ -160,7 +95,6 @@ class ProductController extends Controller
     }
 
     public function available(Request $request, Product $product){
-        // Page::where('id', $id)->update(array('image' => 'asdasd'));
         $update = $product->update($request->all());
         if ($update){
             return response()->json(["message"=>$request]);

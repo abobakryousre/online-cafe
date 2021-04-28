@@ -60,8 +60,6 @@ export default {
     },
     props: ['user'],
     beforeMount(){
-        // this.user = user ;
-        console.log(this.user.avatar);
         this.imageServerURL = urls.imageServerURL ;
         const regex = /^http/ig;
         this.expression = this.user.avatar.match(regex) ? true:false ;

@@ -73,10 +73,6 @@
                                                 style="height: 200px;"
                                                 alt="..."
                                         />
-                                        <!-- <div class="card-body align-baseline"  style="position: relative;">
-                                            <h3 class="card-title blue-text">{{product.pivot.quantity}} {{product.name}}</h3>
-                                            <h6 class="card-text details-value">{{ formatPrice(product.price) }}</h6>
-                                        </div> -->
 
                                           <div class="d-flex w-100 justify-content-between mb-3 align-baseline">
                                             <div class="row col-6 ">

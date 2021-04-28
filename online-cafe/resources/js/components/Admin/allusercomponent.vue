@@ -25,12 +25,9 @@
  </ul>
 </details>
     </td>
-    <!-- <td><img :src="`/image/${user.avatar}`" class="profile-user-img img-fluid img-circle" style="height: 40px; width: 40px"/> </td> -->
     <td v-if="user.avatar.match(/^http/ig)"><img   :src="user.avatar " :alt=" user.name "  style="height: 40px; width: 40px" class="profile-user-img img-fluid img-circle"/></td>
     <td v-if="!user.avatar.match(/^http/ig)"><img   :src="imageServerURL+user.avatar " :alt=" user.name " style="height: 40px; width: 40px" class="profile-user-img img-fluid img-circle" /></td>
-    <!-- <td>{{user.avatar}}</td> -->
-     <!-- <td><a  href="#" class="btn btn-primary">view</a></td> -->
-     <!-- <td><a href="#" class="btn btn-danger">edit</a></td> -->
+ 
 
   <td><router-link :to="'/edit/'+user.id"  class="btn btn-success">Edit</router-link></td> 
 
@@ -43,17 +40,6 @@
 
 </tbody>
 
-
-
-   <!-- <tfoot>
-<tr>
-<td colspan="4"></td>
-
- <td></td>
-
-</tr>
-
-</tfoot> -->
 
  </table>
   <td><router-link :to="'/userstore'"  class="btn btn-success">Add New user </router-link></td> 
@@ -97,15 +83,12 @@ import urls from '../services/apiURLs' ;
 
              }, //end of methods
 
-     created(){
-       
+     created(){    
         this.getUsers();
         this.imageServerURL = urls.imageServerURL ;
-        // const regex = /^http/ig;
-        // this.expression = this.user.avatar.match(regex) ? true:false ;
 
-               },
-        }
+        },
+    }
 
       
 

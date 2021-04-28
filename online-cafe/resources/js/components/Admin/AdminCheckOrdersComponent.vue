@@ -78,12 +78,6 @@ import urls from '../services/apiURLs.js'
             console.log('Component mounted.');
             axios.get(`${urls.getProductsURL}`).then(productResponse => {
             this.products = productResponse.data;
-
-            //  this.products = this.products.map((product) =>{
-            //     product.category_id= this.categories.filter((cata) => parseInt(cata.id) == parseInt(product.category_id))[0] ; 
-            //     console.log(product);
-            //     return product
-            //     });
             })
         },
         methods:{
@@ -102,16 +96,9 @@ import urls from '../services/apiURLs.js'
                 const that = this;
                 let i = this.products.findIndex(item => item.id === id );
                 console.log(this.products[i]);
-                // console.log(this.products[i].available);
                 that.products[i].available = this.products[i].available ? 0 : 1;
                 console.log(that.products[i].available);
                 axios.put(`${urls.putProductAvailableURL}${id}`,{'available':that.products[i].available},{}).then(productResponse => {
-                        // let i = this.products.findIndex(item => item.id === id );
-                        // console.log(i);
-                        // this.products.splice(i,1);
-                        // axios.get(`${urls.getProductsURL}`).then(productResponse => {
-                        //     this.products = productResponse.data;
-                        // })
                         console.log(productResponse);
                         console.log(this.products);
                 } )

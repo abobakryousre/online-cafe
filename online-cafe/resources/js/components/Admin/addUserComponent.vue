@@ -161,7 +161,6 @@ axios.defaults.baseURL = 'http://localhost:8000'
             },
             getRooms() {
                 const that = this ;
-                // console.log('hhhhhhhhhhhhhhh')
                 axios
                 .get("/api/rooms")
                 .then((data) => {
@@ -197,20 +196,6 @@ axios.defaults.baseURL = 'http://localhost:8000'
 
 
         },
-            
-                        
-
-
-
-            // adduser() {
-            //         console.log(this.user);
-            //         // console.log(this.$route.params.id)
-            //     axios
-            //         .post("/api/userstore", this.user)
-            //         .then((res) => {
-            //             this.$router.push({ name:'alluser'});
-            //         });
-            // }
     }
     
 </script>

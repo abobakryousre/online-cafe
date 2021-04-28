@@ -30,12 +30,7 @@ class RoomController extends Controller
     
 
     function store(Request $request){
-       
-        // dd($request);
-        // $user = Auth::user();
-        
-        // $request->user = $user->id ;
-        // dd($request);
+
         $add = Room::create($request->all());
         if ($add){
             return response()->json(["message"=>"New Room added successfully"]);
@@ -61,7 +56,6 @@ class RoomController extends Controller
    
     public function destroy(Room $room)
     {
-      
         $delete = $room->delete();
         if ($delete){
             return response()->json(["message"=>"New room deleted successfully"]);
