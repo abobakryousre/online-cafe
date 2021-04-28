@@ -55,7 +55,10 @@
             </tr>
         </tbody>
     </table>
+            <!--  -->
+                        <!-- <PaginationComponent v-if="orders.links" :links="orders.links" @paginate="getData"/> -->
 
+            <!--  -->
     </div>
        <div v-if="products.length < 1">
             <div class="row justify-content-center">
@@ -84,6 +87,8 @@ axios.defaults.withCredentials =true
 axios.defaults.baseURL = 'http://localhost:8000'
 import urls from '../services/apiURLs.js'
 import formater from '../../helper/formater';
+import PaginationComponent from '../Shared/PaginationComponent.vue';
+
 
     export default {
         data(){
@@ -105,6 +110,9 @@ import formater from '../../helper/formater';
             //     return product
             //     });
             })
+        },
+        components: {
+            PaginationComponent,
         },
         methods:{
             remove(id){

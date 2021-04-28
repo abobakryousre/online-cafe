@@ -14,6 +14,7 @@ class ProductController extends Controller
 {
     function __construct(){
         $this->middleware("auth:sanctum");
+        // $this->middleware("auth:sanctum")->only(["destroy","update"]);
 
     }
 
@@ -26,6 +27,18 @@ class ProductController extends Controller
             $productarr[] = $product ;
         }
         // dd($productarr);
+
+        // $products = Product::paginate(2);
+        // $productarr = $products->toArray();
+        // $counter = 0 ;
+        // foreach($products as $product){   
+        //     $product->category_id =  $product->category ;
+        //     $productarr['data'][$counter++] = $product ;
+        // }
+        // // dd($productarr);
+        // if (!$productarr)  return response()->json(["data" => []]);
+        // // dd($products);
+        // return $productarr ;
         return $productarr ;
     }
 
