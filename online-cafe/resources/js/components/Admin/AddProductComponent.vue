@@ -137,15 +137,6 @@ import urls from '../services/apiURLs.js'
             console.log('Component mounted.');
             axios.get(`${urls.getCategoriesURL}`).then(categoryResponse => {
                 this.categories = categoryResponse.data;
-
-                //  this.products = this.products.map((product) =>{
-                //     product.category_id= this.categories.filter((cata) => parseInt(cata.id) == parseInt(product.category_id))[0] ; 
-                //     console.log(product);
-                //     return product
-                //     });
-                // })
-               
-                
                 console.log(this.categories)
             })
         },

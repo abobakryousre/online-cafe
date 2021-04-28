@@ -35,12 +35,6 @@ class CategoryController extends Controller
 
     function store(Request $request)
     {
-
-        // dd($request);
-        // $user = Auth::user();
-
-        // $request->user = $user->id ;
-        // dd($request);
         $add = Category::create($request->all());
         if ($add) {
             return response()->json(["message" => "New Category added successfully"]);

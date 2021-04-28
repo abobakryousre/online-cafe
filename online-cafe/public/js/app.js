@@ -16677,7 +16677,6 @@ __webpack_require__.r(__webpack_exports__);
   created: function created() {
     var _this = this;
 
-    console.log('User Component Created.');
     axios__WEBPACK_IMPORTED_MODULE_0___default().get('/api/user').then(function (response) {
       _this.user = response.data;
     });
@@ -16731,8 +16730,6 @@ __webpack_require__.r(__webpack_exports__);
   },
   props: ['user'],
   beforeMount: function beforeMount() {
-    // this.user = user ;
-    console.log(this.user.avatar);
     this.imageServerURL = _services_apiURLs__WEBPACK_IMPORTED_MODULE_1__.default.imageServerURL;
     var regex = /^http/ig;
     this.expression = this.user.avatar.match(regex) ? true : false;
@@ -16882,7 +16879,7 @@ var render = /*#__PURE__*/_withId(function (_ctx, _cache, $props, $setup, $data,
     _: 1
     /* STABLE */
 
-  })]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <li class=\"p-2\">\r\n                            <router-link to=\"/create-order\" class=\"navbar-brand links\">Manual Order</router-link>\r\n                        </li> "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("li", _hoisted_13, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_router_link, {
+  })]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("li", _hoisted_13, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_router_link, {
     to: "/checks",
     "class": "navbar-brand links"
   }, {

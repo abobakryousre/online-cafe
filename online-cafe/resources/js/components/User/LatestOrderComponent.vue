@@ -13,10 +13,7 @@
                                                 style="height: 200px;"
                                                 alt="..."
                                         />
-                                        <!-- <div class="card-body align-baseline justify-content-between"  style="position: relative;">
-                                            <span class="card-title blue-text">{{product.pivot.quantity}} {{product.name}}</span>
-                                            <span class="card-text details-value">{{ formatPrice(product.price) }}</span>
-                                        </div> -->
+                                     
                                          <div class="d-flex w-100 justify-content-between mb-3 align-baseline">
                                             <div class="row col-6 ">
                                                 <div style="align-self: center; font-family: fantasy; font-size: x-large; padding-left: 7%;color: crimson;"> {{product.name}}</div> 
@@ -54,7 +51,6 @@ export default {
         if(! this.user.is_admin){
             const latestOrder = await services.getLatestOrder(this.user.id);
             this.latestOrder = latestOrder.data;
-            console.log("Latest Order Created \n\ ", latestOrder.data);
         }
        
     },
@@ -68,8 +64,8 @@ export default {
     methods: {
         formatPrice(price){
             const formater = Intl.NumberFormat('eg-SA',{
-                   style: 'currency', currency: 'EGP' 
-                   })
+            style: 'currency', currency: 'EGP' 
+            })
             return formater.format(price);
         },
     },

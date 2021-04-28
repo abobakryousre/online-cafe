@@ -124,14 +124,6 @@ import urls from '../services/apiURLs.js'
                 this.url = URL.createObjectURL(this.form.image);
                 console.log(this.form);
             },
-            // createImage(file) {
-            //     let reader = new FileReader();
-            //     let vm = this;
-            //     reader.onload = (e) => {
-            //         vm.form.image = e.target.result;
-            //     };
-            //     reader.readAsDataURL(file);
-            // },
             onSubmit(e) {
                 e.preventDefault();
                 const existingObj = this;

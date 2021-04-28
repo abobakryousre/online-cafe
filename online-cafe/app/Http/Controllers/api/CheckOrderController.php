@@ -23,7 +23,6 @@ class CheckOrderController extends Controller
         $order_id= $request['orderId'];
         
         $order=Order::find($order_id);
-        // dd($order);
         $user=$order->user;
         
         $room=Room::find($order->room_id);

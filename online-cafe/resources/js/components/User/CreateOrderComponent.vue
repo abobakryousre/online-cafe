@@ -261,13 +261,10 @@ export default {
             const products = await services.getProducts();
             this.products = products.data;
             this.productsFilterList = this.products ;
-            console.log(products.data);
         },
         async getRooms(){
             const products = await services.getRooms();
             this.rooms = products.data;
-            console.log(products.data);
-
         },
         async getData(){
             this.getRooms();

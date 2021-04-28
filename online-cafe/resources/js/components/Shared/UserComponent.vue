@@ -15,8 +15,7 @@ import Navbar from '../User/NavbarComponent.vue';
 
     export default {
         created() {
-            console.log('User Component Created.');
-             axios.get('/api/user').then(response => {
+            axios.get('/api/user').then(response => {
                 this.user = response.data;
             })
         },
