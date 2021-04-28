@@ -2,7 +2,18 @@
     <div class="container" >
        
        <div v-if="products.length > 0">
-        
+           <div class="row mb-1"> 
+                <div class="col-lg-9"></div>
+                
+                    <div class="col-md-3 mt-3 mr-0 p-0">
+                        <div class="input-group">
+                            <input class="form-control rounded-pill py-2 pr-5 mr-1 bg-transparent" type="search" id="example-search-input1" v-model="productSearchName" placeholder="Search By Product Name" v-on:keyup="onSearch">
+                            <span class="input-group-append">
+                                <div class="input-group-text border-0 bg-transparent ml-n5"><i class="fa fa-search"></i></div>
+                            </span>
+                        </div>
+                    </div>
+           </div>
         <div class="row">
             <form class="col-lg-4 p-3 border" @submit.prevent="confirmOrder()">
                 <!-- Dispaly all User For Admin Start-->
@@ -64,7 +75,7 @@
             <div class="col-1"></div>
             <div id="products" class="col-lg-7 py-3  border">
                 <div class="row justify-content-center">
-                    <div v-for="product in products" :key="product.id" >
+                    <div v-for="product in productsFilterList" :key="product.id" >
                     <div class="card m-2 " style="width: 12rem;  height: 95%;" v-if="product.available">
                         <img
                                 :src="imageServerURL+product.image"
@@ -112,8 +123,7 @@
                 </div>
             </div>
 
-        </div>
-
+        </div> 
     </div>
 </template>
 
@@ -141,11 +151,26 @@ export default {
                 user: user,
             },
             products: [],
+            productsFilterList:[],
             rooms: [],
             allUsers: null,
             imageServerURL:'',
             curUesr:user,
+            productSearchName:''
         }    
+    }, 
+    computed: {
+        onSearch() {
+            if(this.productSearchName == ''){
+                this.productsFilterList = this.products ;
+                return ;
+            }
+                
+            this.productsFilterList = this.products.filter((product) => 
+                product.name.toLowerCase().includes(this.productSearchName)
+            );
+            console.log(this.products)
+        }
     },
     methods:{
         async getAllUsers(){
@@ -235,6 +260,7 @@ export default {
         async getProducts(){
             const products = await services.getProducts();
             this.products = products.data;
+            this.productsFilterList = this.products ;
             console.log(products.data);
         },
         async getRooms(){

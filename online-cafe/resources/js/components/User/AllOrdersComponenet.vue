@@ -70,7 +70,7 @@
                                         <img
                                                 :src="imageServerURL+product.image"
                                                 class="card-img-top img"
-                                                style="height: 80%;"
+                                                style="height: 200px;"
                                                 alt="..."
                                         />
                                         <!-- <div class="card-body align-baseline"  style="position: relative;">
