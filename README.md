@@ -14,8 +14,24 @@ Online-Web App in ITI provide drinks delivery to rooms
 
 ## 💻 How To Use
 
-copy .env before
+copy .env before  usage
+MAIL_MAILER=smtp
+MAIL_HOST=smtp.googlemail.com
+MAIL_PORT=465
+MAIL_USERNAME=cafeteriaiti8@gmail.com
+MAIL_PASSWORD=abobakryousre
+MAIL_ENCRYPTION=ssl
+MAIL_FROM_ADDRESS=cafeteriaiti8@gmail.com
+MAIL_FROM_NAME="${APP_NAME}"
 
+GITHUB_CLIENT_ID=dde97c0d916d1ee91fd5
+GITHUB_CLIENT_SECRET=1b260328ccd7c215c59f6424015efdd7d5bb4705
+
+GOOGLE_CLIENT_ID=99254526777-a1ucb97bd682b7audfvopto1k480h6f3.apps.googleusercontent.com
+GOOGLE_CLIENT_SECRET=LtqXJYYWSuhXYsiE9CgPppYE
+
+FACEBOOK_CLIENT_ID=301684504701741
+FACEBOOK_CLIENT_SECRET=cd39ae08d9246724cb36a90288d67a7b
 
 ⚠️**Note that the server and the client run on port 8080.**
 
