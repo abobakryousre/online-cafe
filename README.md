@@ -8,14 +8,14 @@
 ---
 ## Overview
 
-Simple Web Application that allows ITI students and staff to order snacks and drinks online without going to cafeteria ,and also organize order delivery to rooms.
-Also Application provides almost all details you want about menus and services that support ease of usage.
+- Simple Web Application that allows ITI students and staff to order snacks and drinks online without going to cafeteria ,and also organize order delivery to rooms.
+- Also Application provides almost all details you want about menus and services that support ease of usage.
 
 ---
 
-## 💻 How To Use
+## 💻 Before Running Application
 
-ADD these to your .env file before running project.
+ADD these to your .env file ...
 
 MAIL_MAILER=smtp
 MAIL_HOST=smtp.googlemail.com
@@ -40,10 +40,10 @@ SANCTUM_STATEFUL_DOMAINS= localhost,localhost:3000,127.0.0.1,127.0.0.1:8000,::1,
 
 ⚠️**Note that the server and the client run on port 8080.**
 
-### Run The Client
+### Run Commands 
 
-$ php artsian serve
-$ npm run watch
+- $ php artsian serve
+- $ npm run watch
 
 ---
 ## 📋 Technologies
