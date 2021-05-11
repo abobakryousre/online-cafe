@@ -17,6 +17,7 @@
 
 ADD these to your .env file ...
 
+``` php
 MAIL_MAILER=smtp
 MAIL_HOST=smtp.googlemail.com
 MAIL_PORT=465
@@ -36,15 +37,15 @@ FACEBOOK_CLIENT_ID=301684504701741
 FACEBOOK_CLIENT_SECRET=cd39ae08d9246724cb36a90288d67a7b
 
 SANCTUM_STATEFUL_DOMAINS= localhost,localhost:3000,127.0.0.1,127.0.0.1:8000,::1,localhost:8000
-
+```
 
 ⚠️**Note that the server and the client run on port 8080.**
 
 ### Run Commands 
-
+``` shell
 - $ php artsian serve
 - $ npm run watch
-
+```
 ---
 ## 📋 Technologies
 
