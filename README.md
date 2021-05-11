@@ -8,13 +8,15 @@
 ---
 ## Overview
 
-Online-Web App in ITI provide drinks delivery to rooms
+Simple Web Application that allows ITI students and staff to order snacks and drinks online without going to cafeteria ,and also organize order delivery to rooms.
+Also Application provides almost all details you want about menus and services that support ease of usage.
 
 ---
 
 ## 💻 How To Use
 
-copy .env before  usage
+ADD these to your .env file before running project.
+
 MAIL_MAILER=smtp
 MAIL_HOST=smtp.googlemail.com
 MAIL_PORT=465
@@ -32,6 +34,9 @@ GOOGLE_CLIENT_SECRET=LtqXJYYWSuhXYsiE9CgPppYE
 
 FACEBOOK_CLIENT_ID=301684504701741
 FACEBOOK_CLIENT_SECRET=cd39ae08d9246724cb36a90288d67a7b
+
+SANCTUM_STATEFUL_DOMAINS= localhost,localhost:3000,127.0.0.1,127.0.0.1:8000,::1,localhost:8000
+
 
 ⚠️**Note that the server and the client run on port 8080.**
 
@@ -66,7 +71,7 @@ You can find us on:
 - [AboBaker Yousery](https://www.linkedin.com/in/abobakryousre/)
 - [Ahmed Mamdouh Abdelwahab](https://www.linkedin.com/in/ahmedmamdouh94/)
 - [Ghada Ragab](https://www.linkedin.com/in/ghadaragab/)
-- [Omina Mostafa]
+- [Omina Mostafa](https://www.linkedin.com/in/omnia-mostafa-339b4b211/)
 
 
 
@@ -75,4 +80,4 @@ You can find us on:
 - [AboBaker Yousery](https://github.com/abobakryousre)
 - [Ahmed Mamdouh Abdelwahab](https://github.com/ahmedmumdouh)
 - [Ghada Ragab](https://github.com/GhadaRagab123)
-- [Omina Mostafa]
+- [Omina Mostafa](https://github.com/OmniaMostafa98)
